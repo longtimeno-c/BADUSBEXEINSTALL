@@ -1,6 +1,6 @@
 This is my BADUSB EXE installer 
 This BadUSB only works on windows devices.
-Disclaimer: I hold no responsibility for this scripts use.
+Disclaimer: I hold no responsibility for this scripts use. I do not intend to update this repository and this script is working as of 31/01/2024
 
 
 This will install any exe file onto the machine you are acessing 
